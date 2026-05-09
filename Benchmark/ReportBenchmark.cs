@@ -18,6 +18,7 @@ namespace Benchmark
             _perfomanceTestingService = new PerfomanceTestingService();
         }
 
+
         [Benchmark]
         public async Task AsyncGetReport()
         {
