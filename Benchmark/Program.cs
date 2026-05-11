@@ -15,13 +15,15 @@ public class Program
             | `await`               | NO              | Excellent | Low          | Excellent        |
         */
 
-        //benchmark output
+        //run this command
+        //
+        //dotnet run -c Release
+        //benchmark output  
         /*| Method            | Mean       | Error    | StdDev   | Allocated |
-        |------------------ |-----------:|---------:|---------:|----------:|
-        | AsyncGetReport    |   618.7 ms |  1.77 ms |  1.57 ms |    1944 B |
-        | BadAsyncGetReport | 6,260.4 ms | 37.96 ms | 35.51 ms |   23200 B |
-        | SyncGetReport     | 6,236.7 ms |  8.58 ms |  8.02 ms |         - |
-        */
+        /*---------------- |--------:|---------:|---------:|----------:|
+        | AsyncGetReport    | 6.243 s | 0.0304 s | 0.0284 s |   17064 B |
+        | BadAsyncGetReport | 6.242 s | 0.0568 s | 0.0531 s |   23200 B |
+        | SyncGetReport     | 6.205 s | 0.0130 s | 0.0122 s |         - |*/
         BenchmarkRunner.Run<ReportBenchmark>();
     }
 }
